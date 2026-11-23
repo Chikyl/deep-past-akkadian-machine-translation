@@ -2,7 +2,6 @@
 
 A baseline neural machine translation pipeline for the **Deep Past Initiative Machine Translation** Kaggle competition. It fine-tunes **ByT5-small** to translate noisy Akkadian transliterations into English, then generates a competition-ready `submission.csv` with beam search.
 
-> Based on the public starter notebooks by Takamichi Toda ([train](https://www.kaggle.com/code/takamichitoda/dpc-starter-train) · [infer](https://www.kaggle.com/code/takamichitoda/dpc-starter-infer)), adapted and run with my own trained weights.
 
 ---
 
@@ -10,8 +9,7 @@ A baseline neural machine translation pipeline for the **Deep Past Initiative Ma
 
 - [Overview](#overview)
 - [Why ByT5?](#why-byt5)
-- [Repository Structure](#repository-structure)
-- [Pipeline](#pipeline)
+- [Pipeline](#pipeline)+
 - [Configuration](#configuration)
 - [Results](#results)
 
@@ -41,16 +39,6 @@ Akkadian transliterations are full of noise, rare spellings, and out-of-vocabula
 
 The trade-off is longer sequences, which is why `MAX_LENGTH = 512` is used.
 
----
-
-## Repository Structure
-
-```
-.
-├── dpc-starter-train.ipynb    # Data alignment, tokenization, fine-tuning, model saving
-├── dpc-starter-infer.ipynb    # Loads the fine-tuned model, runs beam search, writes submission.csv
-└── README.md
-```
 
 ---
 
